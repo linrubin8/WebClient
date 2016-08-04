@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{04C9AD34-D6AB-4518-9701-9F991D3A8B60}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LB</RootNamespace>
+    <AssemblyName>LB.Controls</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\LB.MainForm\bin\Debug\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\LBBillForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\LBBillForm.Designer.cs">
+      <DependentUpon>LBBillForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LBForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\LBForm.Designer.cs">
+      <DependentUpon>LBForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LBToolStripDropDownButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\LBToolStripDropDownButton.Designer.cs">
+      <DependentUpon>LBToolStripDropDownButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LBToolStripMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\LBToolStripMenuItem.Designer.cs">
+      <DependentUpon>LBToolStripMenuItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TestForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\TestForm1.Designer.cs">
+      <DependentUpon>TestForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LBToolStripButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\LBToolStripButton.Designer.cs">
+      <DependentUpon>LBToolStripButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LBTextBox\AutoCompleteEntry.cs" />
+    <Compile Include="Controls\LBTextBox\AutoCompleteEntryCollection.cs" />
+    <Compile Include="Controls\LBTextBox\AutoCompleteTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\LBTextBox\AutoCompleteTrigger.cs" />
+    <Compile Include="Controls\LBTextBox\AutoCompleteTriggerCollection.cs" />
+    <Compile Include="Controls\LBTextBox\CoolTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\LBTextBox\IAutoCompleteEntry.cs" />
+    <Compile Include="Controls\LBTextBox\Messages.cs" />
+    <Compile Include="Controls\LBTextBox\ShortCutTrigger.cs" />
+    <Compile Include="Controls\LBTextBox\TextLengthTrigger.cs" />
+    <Compile Include="Controls\LBTextBox\TriggerState.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\LBBillForm.resx">
+      <DependentUpon>LBBillForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LBForm.resx">
+      <DependentUpon>LBForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TestForm1.resx">
+      <DependentUpon>TestForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LBTextBox\AutoCompleteTextBox.resx">
+      <DependentUpon>AutoCompleteTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LBTextBox\CoolTextBox.resx">
+      <DependentUpon>CoolTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
